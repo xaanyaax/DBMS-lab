@@ -25,7 +25,7 @@ Built using **React**, **Node.js/Express**, and **MySQL**.
 ### **Frontend**
 - React.js
 - Axios
-- TailwindCSS / CSS (your choice)
+- TailwindCSS 
 
 ### **Backend**
 - Node.js
@@ -36,5 +36,33 @@ Built using **React**, **Node.js/Express**, and **MySQL**.
 
 ---
 
-## 📂 Project Structure (Suggested)
+
+---
+
+## 🗄 Database Schema 
+
+### **Students Table**
+- id  
+- name  
+- email  
+- department  
+- year  
+- section  
+- password  
+
+### **Timetable Table**
+- id  
+- department  
+- year  
+- section  
+- day  
+- period_number  
+- subject  
+- faculty  
+- room  
+
+---
+
+
+
 
