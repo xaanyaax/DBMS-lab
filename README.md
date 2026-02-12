@@ -1,16 +1,16 @@
 📅 TIME TABLE MANAGEMENT SYSTEM
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 🗄️ DATABASE MANAGEMENT SYSTEMS PROJECT
 
-📘 INTRODUCTION
-━━━━━━━━━━━━━━━
+📘 **INTRODUCTION**
+
 
 The Time Table Management System is a database-driven application designed to efficiently organize and manage academic schedules. It streamlines the process of planning lectures by maintaining structured data related to teachers, subjects, student sections, and classrooms.
 
 A centralized timetable ensures optimal allocation of resources while preventing scheduling conflicts. The system is built using a well-designed relational database that guarantees data consistency, integrity, and scalability.
 
-🎯 OBJECTIVES
-━━━━━━━━━━━━
+🎯 **OBJECTIVES**
+
 
 The primary objectives of this project are:
 
@@ -20,8 +20,8 @@ The primary objectives of this project are:
 📌 Maintain section-wise lecture schedules
 📌 Apply database normalization principles and constraints
 
-🔍 SCOPE OF THE SYSTEM
-━━━━━━━━━━━━━━━━━━
+🔍 **SCOPE OF THE SYSTEM**
+
 
 The scope of the Time Table Management System includes:
 
@@ -32,11 +32,10 @@ The scope of the Time Table Management System includes:
 🏫 Classroom and laboratory allocation
 🗓️ Timetable generation and maintenance
 
-🗂️ DATABASE TABLES DESCRIPTION
-━━━━━━━━━━━━━━━━━━━━━━
+🗂️** DATABASE TABLES DESCRIPTION**
 
 👤 ADMINS
-━━━━━━━━━━
+
 
 Stores login credentials and administrative details.
 
@@ -46,7 +45,7 @@ Responsibilities:
 • Create, update, and delete timetable entries
 
 👨‍🏫 TEACHERS
-━━━━━━━━━━━━
+
 
 Stores information related to teaching staff.
 
@@ -61,7 +60,6 @@ Role:
 • Allocated lecture slots through the timetable
 
 📚 SUBJECTS
-━━━━━━━━━━
 
 Contains details of academic subjects.
 
@@ -73,8 +71,8 @@ Attributes:
 
 Subjects are assigned to teachers and scheduled for multiple sections.
 
-🧑‍🎓 SECTIONS
-━━━━━━━━━━
+🧑‍🎓 **SECTIONS**
+
 
 Represents student sections such as BCS-1A, BCS-2B, and BCA-3A.
 
@@ -82,8 +80,8 @@ Features:
 • Each section has a unique timetable
 • Linked with teachers and subjects
 
-🏫 ROOMS
-━━━━━━━━
+🏫** ROOMS**
+
 
 Stores classroom and laboratory details.
 
@@ -95,8 +93,8 @@ Attributes:
 
 Used during lecture scheduling.
 
-🗓️ TIMETABLE
-━━━━━━━━━━
+🗓️ **TIMETABLE**
+
 
 The Timetable table is the core of the system, connecting all entities.
 
@@ -114,8 +112,7 @@ Purpose:
 🚫 Prevent room allocation conflicts
 🚫 Avoid overlapping lectures for sections
 
-🔗 RELATIONSHIPS OVERVIEW
-━━━━━━━━━━━━━━━━━━━━
+🔗 **RELATIONSHIPS OVERVIEW**
 
 • One teacher can teach multiple subjects
 • One subject can be assigned to multiple sections
@@ -124,22 +121,24 @@ Purpose:
 • The timetable acts as a bridge between teachers, subjects, sections, and rooms
 
 ⚠️ CONSTRAINTS AND ASSUMPTIONS
-━━━━━━━━━━━━━━━━━━━━━━
 
 • A teacher cannot be scheduled for more than one lecture at the same time
 • A room cannot be allocated to multiple sections simultaneously
 • A section cannot have overlapping lectures
 • Only administrators are authorized to modify timetable data
 
-🧾 CONCLUSION
-━━━━━━━━━━
+🧾 **CONCLUSION**
+
 
 The Time Table Management System offers a structured and efficient solution for managing academic schedules. By using a centralized timetable and a normalized database design, the system minimizes conflicts, improves resource utilization, and maintains data integrity. This project highlights the practical implementation of core DBMS concepts in an academic environment.
 
-👥 AUTHORS
-━━━━━━━━
+👥 **AUTHORS**
+
 
 Aanya Singh(23DCS002)
+
 Akanksha (23DCS003)
+
 Ankush Thakur (23DCS004)
+
 Anmol Sharma (23DCS005)
