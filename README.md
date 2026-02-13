@@ -7,8 +7,7 @@ The Time Table Management System is a database-driven application designed to ef
 
 A centralized timetable ensures optimal allocation of resources while preventing scheduling conflicts. The system is built using a well-designed relational database that guarantees data consistency, integrity, and scalability.
 
-🎯 **OBJECTIVES**
-
+🎯 *OBJECTIVES*
 
 The primary objectives of this project are:
 
