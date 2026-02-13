@@ -117,7 +117,7 @@ Purpose:
 • One room can host multiple lectures at different times
 • The timetable acts as a bridge between teachers, subjects, sections, and rooms
 
-⚠️ CONSTRAINTS AND ASSUMPTIONS
+⚠️ **CONSTRAINTS AND ASSUMPTIONS**
 
 • A teacher cannot be scheduled for more than one lecture at the same time
 • A room cannot be allocated to multiple sections simultaneously
