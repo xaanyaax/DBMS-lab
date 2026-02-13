@@ -3,8 +3,6 @@
 🗄️ DATABASE MANAGEMENT SYSTEMS PROJECT
 
 📘 **INTRODUCTION**
-
-
 The Time Table Management System is a database-driven application designed to efficiently organize and manage academic schedules. It streamlines the process of planning lectures by maintaining structured data related to teachers, subjects, student sections, and classrooms.
 
 A centralized timetable ensures optimal allocation of resources while preventing scheduling conflicts. The system is built using a well-designed relational database that guarantees data consistency, integrity, and scalability.
@@ -73,7 +71,6 @@ Subjects are assigned to teachers and scheduled for multiple sections.
 
 🧑‍🎓 **SECTIONS**
 
-
 Represents student sections such as BCS-1A, BCS-2B, and BCA-3A.
 
 Features:
@@ -99,6 +96,7 @@ Used during lecture scheduling.
 The Timetable table is the core of the system, connecting all entities.
 
 Attributes:
+
 • timetable_id (Primary Key)
 • section_id (Foreign Key)
 • teacher_id (Foreign Key)
