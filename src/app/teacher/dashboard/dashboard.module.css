@@ -1,0 +1,3 @@
+// Re-using the same CSS module created for the student dashboard.
+// We can just import and use it to maintain design consistency.
+export * from '../../student/dashboard/dashboard.module.css';

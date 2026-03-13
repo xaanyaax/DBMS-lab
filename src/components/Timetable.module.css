@@ -1,0 +1,160 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.timetableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 80px repeat(5, 1fr);
+  gap: 1px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cell {
+  background-color: var(--bg-color); /* The dark base */
+  padding: 1rem;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.headerCell {
+  background-color: rgba(79, 70, 229, 0.1);
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 1rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.timeCell {
+  background-color: rgba(255, 255, 255, 0.02);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Class Blocks */
+.classBlock {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.classBlock:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 20;
+}
+
+.subjectName {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.roomName {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.teacherName {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+/* Colors for subjective types */
+.colorBlue { background: linear-gradient(135deg, #3B82F6, #2563EB); }
+.colorPurple { background: linear-gradient(135deg, #8B5CF6, #6D28D9); }
+.colorGreen { background: linear-gradient(135deg, #10B981, #059669); }
+.colorOrange { background: linear-gradient(135deg, #F59E0B, #D97706); }
+.colorRed { background: linear-gradient(135deg, #EF4444, #DC2626); }
+.colorPink { background: linear-gradient(135deg, #EC4899, #DB2777); }
+
+@media (max-width: 1024px) {
+  .grid {
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+  
+  .row {
+    display: inline-flex;
+    width: max-content;
+  }
+  
+  .cell {
+    width: 180px;
+    flex-shrink: 0;
+  }
+  
+  .timeCell {
+    width: 80px;
+    position: sticky;
+    left: 0;
+    z-index: 30;
+  }
+}

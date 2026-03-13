@@ -1,64 +1,72 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div className={styles.container}>
+      <nav className={styles.nav}>
+        <div className={styles.logoContainer}>
+          <Image src="/logo.png" alt="TimeFlow Logo" width={40} height={40} className={styles.logoImage} />
+          <span className={styles.logoText}>TimeFlow</span>
+        </div>
+      </nav>
+
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+        <div className={styles.hero}>
+          <h1 className={styles.title}>
+            Master Your Schedule with <span className={styles.highlight}>TimeFlow</span>
+          </h1>
+          <p className={styles.subtitle}>
+            The ultimate intelligent time table management system designed for educational institutions. Seamlessly organize classes, manage resources, and stay perfectly synchronized.
           </p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className={styles.loginGrid}>
+          {/* Admin Login */}
+          <Link href="/login/admin" className={styles.loginCard}>
+            <div className={styles.iconWrapper}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0110 0v4"></path>
+              </svg>
+            </div>
+            <div className={styles.cardContent}>
+              <h2 className={styles.cardTitle}>Administrator</h2>
+              <p className={styles.cardDesc}>Manage global schedules, system parameters, and institutional settings.</p>
+            </div>
+            <button className={styles.loginButton}>Admin Login</button>
+          </Link>
+
+          {/* Teacher Login */}
+          <Link href="/login/teacher" className={styles.loginCard}>
+            <div className={styles.iconWrapper}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div className={styles.cardContent}>
+              <h2 className={styles.cardTitle}>Teacher</h2>
+              <p className={styles.cardDesc}>View your assigned classes, manage your availability, and track progress.</p>
+            </div>
+            <button className={styles.loginButton}>Teacher Login</button>
+          </Link>
+
+          {/* Student Login */}
+          <Link href="/login/student" className={styles.loginCard}>
+            <div className={styles.iconWrapper}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div className={styles.cardContent}>
+              <h2 className={styles.cardTitle}>Student</h2>
+              <p className={styles.cardDesc}>Access your personal timetable, upcoming classes, and room assignments.</p>
+            </div>
+            <button className={styles.loginButton}>Student Login</button>
+          </Link>
         </div>
       </main>
     </div>
